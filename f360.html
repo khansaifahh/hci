@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>360 of Pantai Tiga Warna</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <!-- <link rel="stylesheet" href="assets/plugin/fontawesome-5.2.0/css/all.css"> -->
+    <!-- <script src="assets/plugin/fontawesome-5.2.0/js/all.js"></script> -->
+    <script src="https://kit.fontawesome.com/f0f2d9386c.js" crossorigin="anonymous"></script>
+    <script>
+        function change1(){
+            document.getElementById("frame1").setAttribute("src", "https://www.google.com/maps/embed?pb=!4v1615700617535!6m8!1m7!1sCAoSLEFGMVFpcE9ZNXdYV0JRSlFhYXc4V09vR25SbjY5ZWJpUFUxUzZ6a1FVMG42!2m2!1d-8.4393139!2d112.6772308!3f10.093808999999993!4f5.384609999999995!5f0.7820865974627469");
+        }
+        function change2(){
+            document.getElementById("frame1").setAttribute("src", "https://www.google.com/maps/embed?pb=!4v1615706319334!6m8!1m7!1sCAoSLEFGMVFpcE43T3RmMU1tSUhBN1Bia1d5TzBqcTVRSUdEMExYc0lMV3RQT0sy!2m2!1d-8.4400129!2d112.6759289!3f120!4f10!5f0.7820865974627469");
+        }
+        function change3(){
+            document.getElementById("frame1").setAttribute("src", "https://www.google.com/maps/embed?pb=!4v1615706085058!6m8!1m7!1sCAoSLEFGMVFpcE14OTJPUkltcFp0NTVjal9DMTduOGJoMnJhVXhMd3FOMTBHTU5a!2m2!1d-8.4390888!2d112.6782112!3f144.5921137043418!4f-2.508309892017749!5f0.4000000000000002");
+        }
+        function change4(){
+            document.getElementById("frame1").setAttribute("src", "https://www.google.com/maps/embed?pb=!4v1615706136666!6m8!1m7!1sf0lf8T1j59niwlZmBV5jKg!2m2!1d-8.431187609195819!2d112.6857508403994!3f132.70262!4f0!5f0.7820865974627469");
+        }
+    </script>
+</head>
+<body>
+    <header class="f360">
+        <div class="menu">
+            <div class="pilihan" onclick="change1()"><i class="fas fa-umbrella-beach" style="padding-left: 1px;"></i><span>Daylight View</span></div>
+            <div class="pilihan" onclick="change2()"><i class="fas fa-cloud" style="padding-left: 2px;"></i><span>Cloudy View</span></div>
+            <div class="pilihan" onclick="change3()"><i class="fas fa-cubes" style="padding-left: 5px;"></i><span>Coral View</span></div>
+            <div class="pilihan" onclick="change4()"><i class="fas fa-parking" style="padding-left: 5px;"></i><span>Parking View</span></div>
+        </div>
+    </header>
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1615700617535!6m8!1m7!1sCAoSLEFGMVFpcE9ZNXdYV0JRSlFhYXc4V09vR25SbjY5ZWJpUFUxUzZ6a1FVMG42!2m2!1d-8.4393139!2d112.6772308!3f10.093808999999993!4f5.384609999999995!5f0.7820865974627469" allowfullscreen="" loading="lazy" id="frame1"></iframe>
+    <a href="index.html"><button class="back">Back to main menu</button></a>
+</body>
+</html>

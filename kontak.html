@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/plugin/fullPage.js-master/dist/fullpage.css">
+    <link rel="stylesheet" href="assets/plugin/fancybox-2.1.7/source/jquery.fancybox.css">
+    <script src="https://kit.fontawesome.com/f0f2d9386c.js" crossorigin="anonymous"></script>
+    <script src="assets/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/dist/fullpage.js"></script>
+    <script src="assets/plugin/fancybox-2.1.7/source/jquery.fancybox.pack.js"></script>
+    <script>
+        //using document ready...
+        $(document).ready(function(){
+            //initialising fullpage.js in the jQuery way
+            $('#fullpage').fullpage({
+                navigation: false,
+                slidesNavigation: true,
+                sectionsColor : ['#a3ddcb'],
+            });
+
+            // $(".fancybox-thumb").fancybox({
+            //     prevEffect	: 'none',
+            //     nextEffect	: 'none',
+            //     helpers	: {
+            //         title	: {
+            //             type: 'outside'
+            //         },
+            //         thumbs	: {
+            //             width	: 50,
+            //             height	: 50
+            //         }
+            //     }
+            // });
+
+            $(".fancybox").fancybox();
+
+        });
+
+        function openBar(){
+            document.getElementById("bar").style.width = "100vw";
+        }
+
+        function closeBar(){
+            document.getElementById("bar").style.width = "0";
+        }
+    </script>
+    <style>
+        #fp-nav ul li a span {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menuBar" id="bar">
+        <div class="close" onclick="closeBar()">
+            <button><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="paketWisata.html">Paket Wisata</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </div>
+    <header class="home">
+        <nav class="container">
+            <div class="logo">
+                <h1><span class="span1">Pantai</span><span class="span2">Tiga</span><span class="span3">Warna</span></h1>
+            </div>
+            <div class="navigasi">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="paketWisata.html">Paket Wisata</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <div class="toggle" onclick="openBar()">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="kontak-card">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="img-kontak">
+                                        <img src="assets/image/adi.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="tulis-kontak">
+                                        <h2>Made Adi Adnyana</h2>
+                                        <p><a href="mailto:made.adnyana@binus.ac.id?subject=Comment Website Pantai Tiga Warna">made.adnyana@binus.ac.id</a></p>
+                                        <p>Computer Science <span>Binus@Malang</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kontak-card">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="img-kontak">
+                                        <img src="assets/image/andru.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="tulis-kontak">
+                                        <h2>Andru Baskara Putra</h2>
+                                        <p><a href="mailto:andru.putra@binus.ac.id?subject=Comment Website Pantai Tiga Warna">andru.putra@binus.ac.id</a></p>
+                                        <p>Computer Science <span>Binus@Malang</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="kontak-card">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="img-kontak">
+                                        <img src="assets/image/afifah.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="tulis-kontak">
+                                        <h2>Afifah Khoirun Nisa</h2>
+                                        <p><a href="mailto:afifah.nisa@binus.ac.id?subject=Comment Website Pantai Tiga Warna">afifah.nisa@binus.ac.id</a></p>
+                                        <p>Computer Science <span>Binus@Malang</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kontak-card">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="img-kontak">
+                                        <img src="assets/image/chika.jpeg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="tulis-kontak">
+                                        <h2>Maria Jessica Sutjiadi</h2>
+                                        <p><a href="mailto:maria.sutjiadi@binus.ac.id?subject=Comment Website Pantai Tiga Warna">maria.sutjiadi@binus.ac.id</a></p>
+                                        <p>Computer Science <span>Binus@Malang</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="judulPage">
+                <h2>Kontak</h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

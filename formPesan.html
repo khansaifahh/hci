@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <script src="assets/js/formValid.js"></script>
+    <!-- <script src="assets/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script> -->
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+        function SubForm (){
+            $.ajax({
+                url:"https://api.apispreadsheets.com/data/13572/",
+                type:"post",
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                    alert("Form Data Submitted :)");
+                    window.location.href = "index.html";
+                },
+                error: function(){
+                    alert("There was an error :(");
+                }
+            });
+        }
+	</script>
+</head>
+<body>
+    <section class="bg-form">
+        <div class="form">
+            <h1>Form Pemesanan Paket Wisata</h1>
+            <form id="myForm" onsubmit="return checkForm()">
+                <label for="">Nama :
+                    <input type="text" placeholder="Nama ..." required name="nama" id="namaForm" onkeyup="cekNama()">
+                </label>
+                <label for="">Alamat :
+                    <input type="text" placeholder="Alamat ..." required name="alamat" id="alamatForm">
+                </label>
+                <label for="">Email :
+                    <input type="email" placeholder="Email ..." required name="email" id="emailForm">
+                </label>
+                <label for="">No. Telp :
+                    <input type="text" placeholder="No. Telp ..." required name="noTelp" id="noTelpForm" onkeyup="cekNoTelp()">
+                </label>
+                <div>
+                    <!-- Desain Belum Ada -->
+                    <div><label for="">Pilihan Paket Wisata :</label></div>
+                    <select name="selectPW" id="pakwisForm" onchange="perhitungan()">
+                        <option value="0">-- Pilih Paket Wisara --</option>
+                        <option value="250000">Paket Snorkeling (Transportasi, Snorkeling, Makan) Paket Perorangan</option>
+                        <option value="500000">Paket Berkemah (Transportasi, Lahan dan Tenda, Snorkeling, Makan) Paket Perorangan</option>
+                        <option value="750000">Paket Keluarga / Grup (Transportasi, Foto Dokumentasi, Makan) Paket Grup 5 Orang</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="padding: 0 !important; margin-right: 2%;">
+                        <label for="">Tanggal :
+                            <input type="date" required name="tanggal" id="tanggalForm" value="0">
+                        </label>
+                    </div>
+                    <div class="col-6" style="padding: 0 !important; margin-top: 2px; margin-left: 2%;">
+                        <label for="" class="num">Jumlah Paket Yang dibeli
+                            <div class="row">
+                                <div class="col-2" style="padding: 0 !important;">
+                                    <button type="button" id="minus">-</button>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" value="0" id="numForm" name="num" onchange="perhitungan()" onkeyup="cekAngka()" style="text-align: center;">
+                                </div>
+                                <div class="col-2" style="padding: 0 !important;">
+                                    <button type="button" id="plus">+</button>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <label for="">Total Pembayaran :
+                    <input type="text" value="Rp. 0" name="total" disabled id="total">
+                </label>
+                <button class="btn-submit" id="btnUn">Kirim</button>
+            </form>
+            <!-- <button class="btn-submit" onclick='SubForm()' id="btnDone">Kirim</button> -->
+        </div>
+    </section>
+    <script>
+        var num = document.getElementById("numForm");
+        var plusBtn = document.getElementById("plus");
+        var minusBtn = document.getElementById("minus");
+        var namaForm = document.getElementById("namaForm");
+        var emailForm = document.getElementById("emailForm");
+        var noTelpForm = document.getElementById("noTelpForm");
+        var selectForm = document.getElementById("pakwisForm");
+        var tanggalForm = document.getElementById("tanggalForm");
+        var total = document.getElementById("total");
+        var btnUn = document.getElementById("btnUn");
+        var btnDone = document.getElementById("btnDone");
+
+        function checkForm(){
+            var polaEmail=/^.+\@.+\..+$/;
+            if(!polaEmail.test(emailForm.value)){
+                alert("Masukkan Email Dengan Benar\nContoh : andru@microsoft.com");
+                return false;
+            } else if(selectForm.value == 0){
+                alert("Pilih Paket Wisata Terlebih Dahulu");
+                return false;
+            } else if(num.value == 0){
+                alert("Masukkan Jumlah Paket Dengan Benar\n(Minimal 1)");
+                return false;
+            } else if(tanggalForm == 0){
+                alert("Pilih Tanggal Terlebih Dahulu");
+                return false;
+            } else {
+                SubForm();
+                return false;
+            }
+        }
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+
+        function cekNama(){
+            var pola = /^[a-zA-Z]+$/;
+            var temp = namaForm.value;
+            if(!pola.test(temp)){
+                namaForm.value = temp.replace(/[0-9]/g, '');
+            }
+        }
+
+        function cekNoTelp(){
+            var pola = /^\d+$/;
+            var temp = noTelpForm.value;
+            if(!pola.test(temp)){
+                noTelpForm.value = temp.replace(/[a-zA-Z]/g, '');
+            }
+        }
+
+        function perhitungan(){
+            var numVal = Number(num.value);
+            var selVal = Number(selectForm.value);
+            total.value = 'Rp. ' + numberWithCommas(numVal*selVal);
+        }
+
+        function cekAngka(){
+            var pola = /^\d+$/;
+            if(num.value == ""){
+                
+            } else if(!pola.test(num.value)){
+                num.value = 0;
+            }
+        }
+
+        plusBtn.addEventListener('click', () => {
+            var numVal = Number(num.value);
+            numVal += 1;
+            num.value = numVal;
+            perhitungan();
+        });
+
+        minusBtn.addEventListener('click', () => {
+            var numVal = Number(num.value);
+            if(numVal != 0){
+                numVal -= 1;
+                num.value = numVal;
+            }
+            perhitungan();
+        });
+
+        console.log(num.value);
+    </script>
+</body>
+</html>

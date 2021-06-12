@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Pantai Tiga Warna</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/plugin/fullPage.js-master/dist/fullpage.css">
+    <link rel="stylesheet" href="assets/plugin/fancybox-2.1.7/source/jquery.fancybox.css">
+    <script src="https://kit.fontawesome.com/f0f2d9386c.js" crossorigin="anonymous"></script>
+    <script src="assets/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/dist/fullpage.js"></script>
+    <script src="assets/plugin/fancybox-2.1.7/source/jquery.fancybox.pack.js"></script>
+    <script>
+        //using document ready...
+        $(document).ready(function(){
+            //initialising fullpage.js in the jQuery way
+            $('#fullpage').fullpage({
+                navigation: false,
+                slidesNavigation: true,
+                sectionsColor : ['#ffe3de'],
+            });
+
+            // $(".fancybox-thumb").fancybox({
+            //     prevEffect	: 'none',
+            //     nextEffect	: 'none',
+            //     helpers	: {
+            //         title	: {
+            //             type: 'outside'
+            //         },
+            //         thumbs	: {
+            //             width	: 50,
+            //             height	: 50
+            //         }
+            //     }
+            // });
+
+            $(".fancybox").fancybox();
+
+        });
+
+        function openBar(){
+            document.getElementById("bar").style.width = "100vw";
+        }
+
+        function closeBar(){
+            document.getElementById("bar").style.width = "0";
+        }
+    </script>
+    <style>
+        #fp-nav ul li a span {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menuBar" id="bar">
+        <div class="close" onclick="closeBar()">
+            <button><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="paketWisata.html">Paket Wisata</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </div>
+    <header class="home">
+        <nav class="container">
+            <div class="logo">
+                <h1><span class="span1">Pantai</span><span class="span2">Tiga</span><span class="span3">Warna</span></h1>
+            </div>
+            <div class="navigasi">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="paketWisata.html">Paket Wisata</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <div class="toggle" onclick="openBar()">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section">
+                <div class="slide">
+                    <section class="bg-galpage">
+                        <div class="container">
+                            <div class="galeri">
+                                <a class="fancybox" rel="group" href="assets/image/pantai-3-warnaaa.jpeg"><img src="assets/image/pantai-3-warnaaa.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test1.jpeg"><img src="assets/image/test1.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test2.jpeg"><img src="assets/image/test2.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test3.jpeg"><img src="assets/image/test3.jpeg" alt="" /></a>
+                                <!-- <a class="fancybox" rel="group" href="assets/image/aaaa.jpeg"><img src="assets/image/aaaa.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/bbb.jpeg"><img src="assets/image/bbb.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/1431835453422.jpeg"><img src="assets/image/1431835453422.jpeg" alt="" /></a> -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="bg-galpage">
+                        <div class="container">
+                            <div class="galeri">
+                                <a class="fancybox" rel="group" href="assets/image/test4.jpeg"><img src="assets/image/test4.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test5.jpeg"><img src="assets/image/test5.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test6.jpeg"><img src="assets/image/test6.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test7.jpeg"><img src="assets/image/test7.jpeg" alt="" /></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="bg-galpage">
+                        <div class="container">
+                            <div class="galeri">
+                                <a class="fancybox" rel="group" href="assets/image/test8.jpeg"><img src="assets/image/test8.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test9.jpeg"><img src="assets/image/test9.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test10.jpeg"><img src="assets/image/test10.jpeg" alt="" /></a>
+                                <a class="fancybox" rel="group" href="assets/image/test11.jpeg"><img src="assets/image/test11.jpeg" alt="" /></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="judulPage">
+                <h2>Galeri</h2>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

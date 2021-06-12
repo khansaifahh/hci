@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Wisata Pantai Tiga Warna</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/plugin/fullPage.js-master/dist/fullpage.css">
+    <script src="https://kit.fontawesome.com/f0f2d9386c.js" crossorigin="anonymous"></script>
+    <script src="assets/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/dist/fullpage.js"></script>
+    <script type="text/javascript">
+        //using document ready...
+        $(document).ready(function(){
+            //initialising fullpage.js in the jQuery way
+            $('#fullpage').fullpage({
+                navigation: false,
+                slidesNavigation: true,
+                sectionsColor : ['#0080b3', '#a3ddcb', '#ffe3de'],
+            });
+        });
+
+        function openBar(){
+            document.getElementById("bar").style.width = "100vw";
+        }
+
+        function closeBar(){
+            document.getElementById("bar").style.width = "0";
+        }
+    </script>
+    <style>
+        #fp-nav ul li a span {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menuBar" id="bar">
+        <div class="close" onclick="closeBar()">
+            <button><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="paketWisata.html">Paket Wisata</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </div>
+    <header class="home">
+        <nav class="container">
+            <div class="logo">
+                <h1><span class="span1">Pantai</span><span class="span2">Tiga</span><span class="span3">Warna</span></h1>
+            </div>
+            <div class="navigasi">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="paketWisata.html">Paket Wisata</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <div class="toggle" onclick="openBar()">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section">
+                <div class="slide">
+                    <section class="bg-pakwis">
+                        <div class="paketWisata">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                    <img src="assets/image/pakwis1.jpeg" alt="">
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="text-pakwis">
+                                        <h2>Paket Snorkeling</h2>
+                                        <h4>Deskripsi</h4>
+                                        <p>
+                                            Ini adalah paket wisata di pantai tiga warna yang ditujukan kepada orang orang yang berniat melakukan snorkeling di pantai tiga warna ini. Paket ini sudah termasuk transportasi, tiket, dan makan.
+                                        </p>
+                                        <h4>Fasilitas</h4>
+                                        <ul>
+                                            <li>Antar Jemput Daerah Malang</li>
+                                            <li>Tiket Masuk Pantai</li>
+                                            <li>Makan Siang</li>
+                                            <li>Alat Snorkeling</li>
+                                            <li>Guide Lokal</li>
+                                            <li>Snack</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                    <button>Pesan</button>
+                                </div> -->
+                            </div>
+                            <div class="pesan-pakwis">
+                                <h3>Rp 250.000 / orang</h3>
+                                <a href="formPesan.html"><button>Pesan Paket Wisata</button></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="bg-pakwis">
+                        <div class="paketWisata">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                    <img src="assets/image/pakwis21.JPG" alt="">
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="text-pakwis">
+                                        <h2>Paket Berkemah</h2>
+                                        <h4>Deskripsi</h4>
+                                        <p>
+                                            Paket wisata ini adalah paket yang dapat anda pilih jika ingin melakukan perkemahan di pantai tiga warna. Walaupun paket ini difokuskan untuk berkemah, tetapi snorkeling juga tetap termasuk untuk mengisi waktu luang anda disana.
+                                        </p>
+                                        <h4>Fasilitas</h4>
+                                        <ul>
+                                            <li>Antar Jemput Daerah Malang</li>
+                                            <li>Tiket Masuk Pantai</li>
+                                            <li>Sewa Lahan dan Tenda</li>
+                                            <li>Makan Siang</li>
+                                            <li>Alat Snorkeling</li>
+                                            <li>Guide Lokal</li>
+                                            <li>Snack</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                    <button>Pesan</button>
+                                </div> -->
+                            </div>
+                            <div class="pesan-pakwis">
+                                <h3>Rp 500.000 / orang</h3>
+                                <a href="formPesan.html"><button>Pesan Paket Wisata</button></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="slide">
+                    <section class="bg-pakwis">
+                        <div class="paketWisata">
+                            <div class="row">
+                                <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                    <img src="assets/image/pakwis3.jpeg" alt="">
+                                </div>
+                                <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="text-pakwis">
+                                        <h2>Paket Keluarga / Grup</h2>
+                                        <h4>Deskripsi</h4>
+                                        <p>
+                                            Paket ini sangat cocok untuk anda yang ingin melakukan wisata ke pantai tiga warna bersama keluarga ataupun kelompok. Paket ini juga sudah termasuk foto dokumentasi dan spanduk sebagai kenangan pengalaman wisata anda bersama kelompok anda.
+                                        </p>
+                                        <h4>Fasilitas</h4>
+                                        <ul>
+                                            <li>Antar Jemput Daerah Malang</li>
+                                            <li>Tiket Masuk Pantai</li>
+                                            <li>Spanduk & Foto Dokumentasi</li>
+                                            <li>Makan Siang</li>
+                                            <li>Guide Lokal</li>
+                                            <li>Snack</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
+                                    <button>Pesan</button>
+                                </div> -->
+                            </div>
+                            <div class="pesan-pakwis">
+                                <h3>Rp 750.000 / 5 orang</h3>
+                                <a href="formPesan.html"><button>Pesan Paket Wisata</button></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!-- <div class="section">
+                <div class="bg-pakwis">
+                    <div class="paketWisata">
+                        
+                    </div>
+                </div>
+            </div>  -->
+        </div>
+        <div class="judulPage">
+            <h2 style="color: white;">Paket Wisata</h2>
+        </div>
+    </main>
+</body>
+</html>

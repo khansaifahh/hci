@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantai Tiga Warna</title>
+    <link rel="stylesheet" href="assets/css/baru.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <link rel="stylesheet" href="assets/plugin/fullPage.js-master/dist/fullpage.css">
+    <script src="https://kit.fontawesome.com/f0f2d9386c.js" crossorigin="anonymous"></script>
+    <script src="assets/plugin/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/vendors/scrolloverflow.min.js"></script>
+    <script src="assets/plugin/fullPage.js-master/dist/fullpage.js"></script>
+    <script type="text/javascript">
+        //using document ready...
+        $(document).ready(function(){
+            //initialising fullpage.js in the jQuery way
+            $('#fullpage').fullpage({
+                navigation: true,
+                // slidesNavigation: true,
+                sectionsColor : ['#fff', '#0080b3', '#a3ddcb', '#ffe3de'],
+            });
+        });
+
+        function openBar(){
+            document.getElementById("bar").style.width = "100vw";
+        }
+
+        function closeBar(){
+            document.getElementById("bar").style.width = "0";
+        }
+    </script>
+    <style>
+        #fp-nav ul li a span {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="menuBar" id="bar">
+        <div class="close" onclick="closeBar()">
+            <button><i class="fas fa-times"></i></button>
+        </div>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="gallery.html">Galeri</a></li>
+            <li><a href="paketWisata.html">Paket Wisata</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </div>
+    <header class="home">
+        <nav class="container">
+            <div class="logo">
+                <h1><span class="span1">Pantai</span><span class="span2">Tiga</span><span class="span3">Warna</span></h1>
+            </div>
+            <div class="navigasi">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="gallery.html">Galeri</a></li>
+                    <li><a href="paketWisata.html">Paket Wisata</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+                <div class="toggle" onclick="openBar()">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <div class="section">
+                <section class="bg-banner">
+                    <div class="bg-black">
+                        <div class="container">
+                            <div class="banner">
+                                <div class="title-banner">
+                                    <h1>Pantai Tiga Warna</h1>
+                                    <h3>Pantai yang asri dengan gradasi tiga warna.</h3>
+                                    <p>
+                                        Telusuri Lebih lanjut dengan fitur ini ...
+                                    </p>
+                                    <div class="btn">
+                                        <a href="f360.html"><button>360 Discovery</button></a>
+                                        <a href="photobooth.html"><button>Photo Booth</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="section">
+                <section class="bg-aktivitas">
+                    <div class="container">
+                        <div class="aktivitas">
+                            <h1>Aktivitas</h1>
+                            <div class="card-container">
+                                <div class="card">
+                                    <img src="assets/image/snorkeling2.jpg" alt="">
+                                    <div class="text-card">
+                                        <h3><i class="fas fa-fish"></i> Snorkeling</h3>
+                                        <p>
+                                            Jika tertarik untuk melihat pemandangan bawah laut maka Anda dapat menyewa peralatan snorkeling dengan harga Rp 15.000 per set.
+                                        </p>
+                                        <hr>
+                                        <div class="price">
+                                            <h4>Buka :</h4>
+                                            <h4><i class="fas fa-clock"></i> 11.00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/image/pantai tiga warna 4.JPG" alt="">
+                                    <div class="text-card">
+                                        <h3><i class="fas fa-campground"></i> Camping</h3>
+                                        <p>
+                                            Selain menikmati keasrian pantai ini, pengunjung pantai 3 warna juga diperbolehkan untuk menginap atau melakukan camping.
+                                        </p>
+                                        <hr>
+                                        <div class="price">
+                                            <h4>Buka :</h4>
+                                            <h4><i class="fas fa-clock"></i> 15.00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/image/gopr5394.jpeg" alt="">
+                                    <div class="text-card">
+                                        <h3><i class="fas fa-walking"></i> Trekking</h3>
+                                        <p>
+                                            Untuk melakukan trekking, pengunjung harus menyewa guide. Biaya guide sebesar Rp. 100.000 per kelompok, dan dibatasi maksimal 10 orang.
+                                        </p>
+                                        <hr>
+                                        <div class="price">
+                                            <h4>Buka :</h4>
+                                            <h4><i class="fas fa-clock"></i> 10.00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img src="assets/image/bn2.jpeg" alt="">
+                                    <div class="text-card">
+                                        <h3><i class="fas fa-life-ring"></i> Banana Boat</h3>
+                                        <p>
+                                            Salah satu wahana menarik yang ada di pantai ini adalah banana boat. Pengunjung pantai tiga warna bisa menyewa banana boat.
+                                        </p>
+                                        <hr>
+                                        <div class="price">
+                                            <h4>Buka :</h4>
+                                            <h4><i class="fas fa-clock"></i> 11.00</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="section">
+                <section class="bg-fasilitas">
+                    <div class="container">
+                        <div class="fasilitas">
+                            <h1>Fasilitas</h1>
+                            <div class="icon-container">
+                                <div class="icon">
+                                    <i class="fas fa-user-friends"></i>
+                                    <h3>Pemandu Wisata</h3>
+                                    <p>Memandu perjalanan wisata Anda dari awal hingga akhir</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-swimmer"></i>
+                                    <h3>Alat Snorkeling</h3>
+                                    <p>Peralatan snorkeling dengan kualitas yang baik dan aman</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-utensils"></i>
+                                    <h3>Warung Makan</h3>
+                                    <p>Menyediakan makanan untuk melengkapi istirahat kamu</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-car"></i>
+                                    <h3>Area Parkir Kendaraan</h3>
+                                    <p>Area parkir kendaraan yang rapi dan aman</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-pray"></i>
+                                    <h3>Musolla</h3>
+                                    <p>Musholla yang nyaman dan sunyi</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-shower"></i>
+                                    <h3>Kamar Mandi</h3>
+                                    <p>Kamar mandi yang nyaman untuk Anda</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="section">
+                <section class="bg-gallery">
+                    <div class="container">
+                        <!-- <h1>Galeri</h1> -->
+                        <div class="gallery-container">
+                            <div class="gallery">
+                                <img src="assets/image/g2.jpeg" alt="">
+                                <img src="assets/image/g3.jpeg" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="assets/image/g1.jpg" alt="">
+                            </div>
+                            <div class="gallery">
+                                <img src="assets/image/g4.jpeg" alt="">
+                                <img src="assets/image/g5.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
